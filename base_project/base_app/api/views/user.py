@@ -72,7 +72,7 @@ class UserAPI(APIView):
 
             if self.User.objects.filter(email=request.data['email_id']).exists():
                 a = self.User.objects.filter(email=request.data['email_id'])
-                LOGGER.debug("&&&&&&&&&d& %", a)
+                LOGGER.debug("&&&&&&&h&d& %", a)
                 user_detail = self.User.objects.get(email=request.data['email_id']).id
 
                 print("********* %s", user_detail)
