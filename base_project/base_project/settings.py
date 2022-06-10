@@ -65,7 +65,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'base_project.middleware.LoginRequiredMiddleware',
+    # 'base_project.middleware.LoginRequiredMiddleware',
 ]
 
 ROOT_URLCONF = 'base_project.urls'
@@ -73,7 +73,7 @@ ROOT_URLCONF = 'base_project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ["templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

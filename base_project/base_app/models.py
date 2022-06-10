@@ -40,3 +40,5 @@ class UserInfo(Tracker):
     class Meta:
         managed = True
         db_table = 'user_info'
+
+
