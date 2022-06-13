@@ -42,3 +42,16 @@ class UserInfo(Tracker):
         db_table = 'user_info'
 
 
+class EmployeeInfo(Tracker):
+    name = models.CharField(max_length=2000, null=False)
+    department = models.CharField(max_length=2000, null=False)
+    address = models.CharField(max_length=2000, null=False)
+    roll = models.BigIntegerField(null=False)
+
+    def __str__(self):
+        return "%s | %s" % (self.name, self.roll)
+
+    class Meta:
+        managed = True
+        db_table = 'Employee_info'
+
