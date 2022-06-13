@@ -21,7 +21,7 @@ class LoginRequiredMiddleware:
 
         User = get_user_model()
 
-        if re.search('/custom/', request.path):
+        if re.search('/home/', request.path):
             print("This is user api")
             return self.get_response(request)
         elif request.path != '/api/token/':
