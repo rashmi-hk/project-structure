@@ -17,13 +17,13 @@ from rest_framework.status import (
 
 class EmployeeAPI(APIView):
 
+    authentication_classes = [SessionAuthentication]
+    permission_classes = [IsAuthenticatedOrReadOnly]
+    throttle_class = [AnonRateThrottle, UserRateThrottle]
 
     def get(self, request):
         print("Inside get employee info")
         emp_data = EmployeeInfo.objects.all()
-        authentication_classes = [SessionAuthentication]
-        permission_classes = [IsAuthenticatedOrReadOnly]
-        throttle_class = [AnonRateThrottle, UserRateThrottle]
         data = serializers.serialize('json', emp_data)
         return_status = status.HTTP_200_OK
         return Response(data=json.dumps(data), status=return_status)

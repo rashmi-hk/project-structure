@@ -20,6 +20,10 @@ class SignInAPI(APIView):
         super(SignInAPI, self).__init__(**kwargs)
         self.User = get_user_model()
 
+    def get(self, request):
+        print("This is get signin")
+        return render(request, 'signin.html')
+
     def post(self, request):
         print("Inside signin post")
         username = request.POST['username']
@@ -31,12 +35,12 @@ class SignInAPI(APIView):
             login(request, user)
             fname = user.first_name
             messages.success(request, "Logged In Sucessfully!!")
-            return render(request, "authentication/index.html", {"fname": fname})
+            return render(request, "index.html", {"fname": fname})
         else:
             messages.error(request, "Bad Credentials!!")
-            return redirect('home')
+            return redirect('signin')
 
-        return render(request, "authentication/signin.html")
+        return render(request, 'signin')
 
 
 class SignOutAPI(APIView):

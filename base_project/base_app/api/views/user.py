@@ -56,13 +56,10 @@ class UserAPI(APIView):
 
             password = request.data.get("password")
             LOGGER.debug("password %s", password)
+
             if username is None or password is None:
                 return Response({'error': 'Please provide both username and password'},
                                 status=HTTP_400_BAD_REQUEST)
-            user = authenticate(username=username, password=password)
-            if not user:
-                return Response({'error': 'Invalid Credentials'},
-                                status=HTTP_404_NOT_FOUND)
 
             if 'profile_pic_url' in request.data:
                 user_dict["image_url"] = request.data['profile_pic_url']
