@@ -49,12 +49,13 @@ class SignUpAPI(APIView):
             messages.error(request, "Username must be Alpha-Numeric!!")
             return redirect(reverse('signup'))
 
+
         myuser = self.User.objects.create_user(username, email, pass1)
         print("myuser %s", myuser)
         myuser.first_name = fname
         myuser.last_name = lname
         # myuser.is_active = False
-        myuser.is_active = False
+        myuser.is_active = True
         myuser.save()
         print("Data saved")
-        return render(request, 'signin/')
+        return render(request, 'signin.html')

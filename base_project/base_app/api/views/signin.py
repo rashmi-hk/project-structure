@@ -27,9 +27,12 @@ class SignInAPI(APIView):
     def post(self, request):
         print("Inside signin post")
         username = request.POST['username']
+        print("username %s", username)
         pass1 = request.POST['pass1']
+        print("passward %s", pass1)
 
         user = authenticate(username=username, password=pass1)
+        print(user)
 
         if user is not None:
             login(request, user)
