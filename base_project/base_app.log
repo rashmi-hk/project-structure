@@ -1,0 +1,6 @@
+2022-06-14 11:56:28.439 DEBUG    base_app.api.views.signup:71 Inside patch method
+2022-06-14 11:56:28.440 DEBUG    base_app.api.views.signup:72 Request {'email': 'sahana@gmail.com'}
+2022-06-14 11:56:28.447 DEBUG    base_app.api.views.signup:76 group_data exist False
+2022-06-14 11:59:10.615 DEBUG    base_app.api.views.signup:71 Inside patch method
+2022-06-14 11:59:10.616 DEBUG    base_app.api.views.signup:72 Request {'email': 'sahana@gmail.com'}
+2022-06-14 11:59:10.618 DEBUG    base_app.api.views.signup:76 group_data exist False

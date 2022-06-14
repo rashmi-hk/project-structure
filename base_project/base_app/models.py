@@ -47,6 +47,7 @@ class EmployeeInfo(Tracker):
     department = models.CharField(max_length=2000, null=False)
     address = models.CharField(max_length=2000, null=False)
     roll = models.BigIntegerField(null=False)
+    is_manager = models.BooleanField(default=False)
 
     def __str__(self):
         return "%s | %s" % (self.name, self.roll)

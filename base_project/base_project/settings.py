@@ -10,7 +10,11 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
+from typing import Any
 import os
+import logging.config
+from datetime import timedelta
+import yaml
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -52,18 +56,27 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.SessionAuthentication',
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ],
-    # 'DEFAULT_THROTTLE_CLASSES': [
-    #     'rest_framework.throttling.AnonRateThrottle',
-    #     'rest_framework.throttling.UserRateThrottle',
-    # ],
-    # 'DEFAULT_THROTTLE_RATES': {
-    #     'anon': '5/hour',
-    #     'anon_day': '6/day',
-    #     'user': '10/hour',
-    #     'user_day': '1000000/day',
-    # },
+
+    'DEFAULT_THROTTLE_CLASSES': [
+        'rest_framework.throttling.AnonRateThrottle',
+        'rest_framework.throttling.UserRateThrottle',
+    ],
+    'DEFAULT_THROTTLE_RATES': {
+        'anon': '200/hour',
+        'anon_day': '1000/day',
+        'user': '500/hour',
+        'user_day': '1000000/day',
+    },
 }
 
+# Enable Logging
+with open(os.path.join(BASE_DIR, './config/logging.yml'), 'rt') as f:
+    LOGGING = yaml.safe_load(f.read())
+logging.config.dictConfig(LOGGING)
+
+SIMPLE_JWT: Any = {
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=60),
+}
 
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 

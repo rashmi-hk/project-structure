@@ -1,0 +1,348 @@
+2022-06-14 11:00:02.589 ERROR    django.request :241 Internal Server Error: /employee/
+Traceback (most recent call last):
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/rashmihk/work/base_project/base_app/api/views/employee.py", line 66, in patch
+    if self.User.groups.filter(name='manager').exists():
+AttributeError: 'ManyToManyDescriptor' object has no attribute 'filter'
+2022-06-14 11:00:02.590 ERROR    django.server  :187 "PATCH /employee/ HTTP/1.1" 500 92927
+2022-06-14 11:12:00.877 ERROR    django.request :241 Internal Server Error: /employee/
+Traceback (most recent call last):
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/rashmihk/work/base_project/base_app/api/views/employee.py", line 72, in patch
+    serializer = EmployeeInfoSerializer(
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/rest_framework/serializers.py", line 116, in __init__
+    super().__init__(**kwargs)
+TypeError: __init__() got an unexpected keyword argument 'previous_record'
+2022-06-14 11:12:00.878 ERROR    django.server  :187 "PATCH /employee/ HTTP/1.1" 500 98306
+2022-06-14 11:14:30.615 ERROR    django.request :241 Internal Server Error: /employee/
+Traceback (most recent call last):
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/rashmihk/work/base_project/base_app/api/views/employee.py", line 72, in patch
+    serializer = EmployeeInfoSerializer(
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/rest_framework/serializers.py", line 116, in __init__
+    super().__init__(**kwargs)
+TypeError: __init__() got an unexpected keyword argument 'previous_record'
+2022-06-14 11:14:30.616 ERROR    django.server  :187 "PATCH /employee/ HTTP/1.1" 500 98156
+2022-06-14 11:16:48.261 ERROR    django.request :241 Internal Server Error: /employee/
+Traceback (most recent call last):
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/rashmihk/work/base_project/base_app/api/views/employee.py", line 72, in patch
+    serializer = EmployeeInfoSerializer(
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/rest_framework/serializers.py", line 116, in __init__
+    super().__init__(**kwargs)
+TypeError: __init__() got an unexpected keyword argument 'previous_record'
+2022-06-14 11:16:48.262 ERROR    django.server  :187 "PATCH /employee/ HTTP/1.1" 500 98281
+2022-06-14 11:17:56.437 ERROR    django.request :241 Internal Server Error: /employee/
+Traceback (most recent call last):
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/rashmihk/work/base_project/base_app/api/views/employee.py", line 72, in patch
+    serializer = EmployeeInfoSerializer(
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/rest_framework/serializers.py", line 116, in __init__
+    super().__init__(**kwargs)
+TypeError: __init__() got an unexpected keyword argument 'previous_record'
+2022-06-14 11:17:56.438 ERROR    django.server  :187 "PATCH /employee/ HTTP/1.1" 500 98281
+2022-06-14 11:19:10.853 ERROR    django.request :241 Internal Server Error: /employee/
+Traceback (most recent call last):
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/rest_framework/views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/rest_framework/views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'base_app.models.EmployeeInfo'>`
+2022-06-14 11:19:10.855 ERROR    django.server  :187 "PATCH /employee/ HTTP/1.1" 500 80131
+2022-06-14 11:43:31.141 ERROR    django.request :241 Internal Server Error: /signup/
+Traceback (most recent call last):
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/rest_framework/views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/rest_framework/views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+2022-06-14 11:43:31.143 ERROR    django.server  :187 "PATCH /signup/ HTTP/1.1" 500 79945
+2022-06-14 11:44:14.258 ERROR    django.request :241 Internal Server Error: /signup/
+Traceback (most recent call last):
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/rashmihk/work/base_project/base_app/api/views/signup.py", line 79, in patch
+    old_data = self.User.objects.get(roll=request.data["roll"])
+KeyError: 'roll'
+2022-06-14 11:44:14.258 ERROR    django.server  :187 "PATCH /signup/ HTTP/1.1" 500 92476
+2022-06-14 11:45:37.965 ERROR    django.request :241 Internal Server Error: /signup/
+Traceback (most recent call last):
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/rashmihk/work/base_project/base_app/api/views/signup.py", line 79, in patch
+    old_data = self.User.objects.get(roll=request.data["roll"])
+KeyError: 'roll'
+2022-06-14 11:45:37.965 ERROR    django.server  :187 "PATCH /signup/ HTTP/1.1" 500 92476
+2022-06-14 11:46:44.491 ERROR    django.request :241 Internal Server Error: /signup/
+Traceback (most recent call last):
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/rashmihk/work/base_project/base_app/api/views/signup.py", line 80, in patch
+    old_data = self.User.objects.get(roll=request.data["roll"])
+KeyError: 'roll'
+2022-06-14 11:46:44.493 ERROR    django.server  :187 "PATCH /signup/ HTTP/1.1" 500 92708
+2022-06-14 11:47:24.679 ERROR    django.request :241 Internal Server Error: /signup/
+Traceback (most recent call last):
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/rashmihk/work/base_project/base_app/api/views/signup.py", line 77, in patch
+    a = self.User.objects.get(email=request.data["email"]).value_list()
+AttributeError: 'User' object has no attribute 'value_list'
+2022-06-14 11:47:24.680 ERROR    django.server  :187 "PATCH /signup/ HTTP/1.1" 500 92970
+2022-06-14 11:49:20.603 ERROR    django.request :241 Internal Server Error: /signup/
+Traceback (most recent call last):
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/rashmihk/work/base_project/base_app/api/views/signup.py", line 77, in patch
+    a = self.User.objects.all().values_list(email=request.data["email"])
+TypeError: values_list() got an unexpected keyword argument 'email'
+2022-06-14 11:49:20.604 ERROR    django.server  :187 "PATCH /signup/ HTTP/1.1" 500 92950
+2022-06-14 11:52:20.426 ERROR    django.request :241 Internal Server Error: /signup/
+Traceback (most recent call last):
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/rashmihk/work/base_project/base_app/api/views/signup.py", line 80, in patch
+    old_data = self.User.objects.get(roll=request.data["roll"])
+KeyError: 'roll'
+2022-06-14 11:52:20.427 ERROR    django.server  :187 "PATCH /signup/ HTTP/1.1" 500 93391
+2022-06-14 11:53:10.184 ERROR    django.request :241 Internal Server Error: /signup/
+Traceback (most recent call last):
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/rashmihk/work/base_project/base_app/api/views/signup.py", line 77, in patch
+    a = self.User.objects.get(email=request.data["email"]).values_list('email')
+AttributeError: 'User' object has no attribute 'values_list'
+2022-06-14 11:53:10.186 ERROR    django.server  :187 "PATCH /signup/ HTTP/1.1" 500 93012
+2022-06-14 11:56:28.510 ERROR    django.request :241 Internal Server Error: /signup/
+Traceback (most recent call last):
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/rashmihk/work/base_project/base_app/api/views/signup.py", line 78, in patch
+    LOGGER.debug("a %s", a.value_from_object)
+AttributeError: 'User' object has no attribute 'value_from_object'
+2022-06-14 11:56:28.512 ERROR    django.server  :187 "PATCH /signup/ HTTP/1.1" 500 93134
+2022-06-14 11:59:10.664 ERROR    django.request :241 Internal Server Error: /signup/
+Traceback (most recent call last):
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/rashmihk/base_env/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/rashmihk/work/base_project/base_app/api/views/signup.py", line 78, in patch
+    for i in a:
+TypeError: 'User' object is not iterable
+2022-06-14 11:59:10.666 ERROR    django.server  :187 "PATCH /signup/ HTTP/1.1" 500 92846

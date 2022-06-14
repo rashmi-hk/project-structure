@@ -2,25 +2,11 @@ import getpass
 import logging
 
 from django.contrib.auth import get_user_model
-from django.core.exceptions import ObjectDoesNotExist
-from django.utils import timezone
-from rest_framework import viewsets
-from rest_framework.permissions import IsAuthenticated
-from rest_framework import status
-from rest_framework.response import Response
+
 from rest_framework.views import APIView
-# from sesame import utils
-# from .utils.api_utils import get_yml_file
-# from .utils.db_utils import DBUtils
-from  ...serializer import UserInfoSerializer
+
 from  ...models import UserInfo
-from django.contrib.auth import authenticate
-from django.http import HttpResponse
-from django.views.decorators.csrf import csrf_exempt
-from rest_framework.authtoken.models import Token
-from rest_framework.decorators import api_view, permission_classes
-from rest_framework.permissions import AllowAny
-from django.core import serializers
+
 from rest_framework.status import (
     HTTP_400_BAD_REQUEST,
     HTTP_404_NOT_FOUND,
@@ -40,7 +26,6 @@ class UserAPI(APIView):
         super(UserAPI, self).__init__(**kwargs)
         self.User = get_user_model()
         # self.db_utils_obj = DBUtils()
-
 
     def post(self, request):
             """
@@ -73,7 +58,6 @@ class UserAPI(APIView):
                 user_detail = self.User.objects.get(email=request.data['email_id']).id
 
                 print("********* %s", user_detail)
-                print("********* %s", user_detail)
                 user_id = user_detail
 
             user_dict["user_id_id"] = user_id
@@ -84,3 +68,4 @@ class UserAPI(APIView):
             # token, _ = Token.objects.get_or_create(user=user)
             return Response(data = user_dict,
                             status=HTTP_200_OK)
+
