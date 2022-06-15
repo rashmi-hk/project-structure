@@ -4,7 +4,7 @@ from .api. views.employee import EmployeeAPI
 from .api. views.home import HomeAPI
 from .api. views.signup import SignUpAPI
 from .api. views.signin import SignInAPI, SignOutAPI
-
+from .api.views.generic_views import EmployeeListView
 from rest_framework_simplejwt.views import (
     TokenObtainPairView,
     TokenRefreshView,
@@ -12,6 +12,7 @@ from rest_framework_simplejwt.views import (
 
 
 urlpatterns = [
+    path('employee_generic/', EmployeeListView.as_view() , name='employee'),
     path('signup/', SignUpAPI.as_view(), name='signup'),
     path('user/', UserAPI.as_view(), name='user'),
     path('employee/', EmployeeAPI.as_view(), name='emp'),
