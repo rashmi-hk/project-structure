@@ -17,6 +17,7 @@ from rest_framework.status import (
     HTTP_200_OK,
     HTTP_201_CREATED,
 )
+from django.contrib.auth.models import Group
 LOGGER = logging.getLogger(__name__)
 
 class EmployeeAPI(APIView):
@@ -68,6 +69,8 @@ class EmployeeAPI(APIView):
             LOGGER.debug("group_data exist %s", group_data)
 
             if EmployeeInfo.objects.get(roll=request.data["roll"]):
+               a = Group.objects.get(name="manager")
+               print('a  %s', a)
                old_data = EmployeeInfo.objects.get(roll=request.data["roll"])
                serializer = EmployeeInfoSerializer(
                    old_data,

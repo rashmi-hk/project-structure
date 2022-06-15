@@ -12,6 +12,6 @@ class HomeAPI(APIView):
         self.User = get_user_model()
 
     def get(self, request):
-        print("This is get")
+        print("This is home get")
         return render(request, "index.html")
 

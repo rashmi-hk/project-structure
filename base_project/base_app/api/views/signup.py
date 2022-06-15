@@ -1,3 +1,4 @@
+import json
 import logging
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
@@ -5,6 +6,15 @@ from django.contrib import messages
 from rest_framework.views import APIView
 from django.contrib.auth import get_user_model
 from django.urls import reverse
+from rest_framework.status import (
+    HTTP_400_BAD_REQUEST,
+    HTTP_404_NOT_FOUND,
+    HTTP_200_OK,
+    HTTP_201_CREATED,
+)
+from django.core import serializers
+from rest_framework.response import Response
+from django.forms.models import model_to_dict
 
 LOGGER = logging.getLogger(__name__)
 
@@ -71,23 +81,30 @@ class SignUpAPI(APIView):
         LOGGER.debug("Inside patch method")
         LOGGER.debug("Request %s", request.data)
         if 'email' in request.data:
+            return_dict = {}
 
             group_data = request.user.groups.filter(name__exact='manager').exists()
             LOGGER.debug("group_data exist %s", group_data)
-            a = self.User.objects.get(email=request.data["email"])
-            for i in a:
-                LOGGER.debug("i %s", i)
-            if self.User.objects.get(email=request.data["email"]):
-                old_data = self.User.objects.get(roll=request.data["roll"])
+            user = self.User.objects.get(email=request.data["email"])
 
+            if self.User.objects.get(email=request.data["email"]):
+                old_data = self.User.objects.get(email=request.data["email"])
                 LOGGER.debug("old_data %s", old_data)
-            #     serializer = EmployeeInfoSerializer(
-            #         old_data,
-            #         data=request.data,
-            #         partial=True
-            #     )
-            #     if serializer.is_valid(raise_exception=True):
-            #         serializer.save()
-            #         return Response(status=HTTP_201_CREATED, data=serializer.data)
-            #
-            # return Response(status=HTTP_400_BAD_REQUEST, data="wrong parameters")
+            if user.groups.filter(name="manager"):
+                LOGGER.debug("group data %s",user.groups.filter(name="manager"))
+                self.User.objects.filter(email=request.data["email"]).update(is_staff = True)
+
+                LOGGER.debug("Updated as True")
+            else:
+                return_dict.update({"is_active": False})
+                self.User.objects.filter(email=request.data["email"]).update(is_staff=False)
+                LOGGER.debug("Updated as false")
+
+            user = self.User.objects.get(email=request.data["email"])
+
+
+            return Response(status=HTTP_201_CREATED)
+
+        return Response(status=HTTP_400_BAD_REQUEST, data="wrong parameters")
+
+
