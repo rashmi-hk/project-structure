@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function myFunction() {
+  document.getElementById("demo").innerHTML = "Paragraph changed.";
+}
+ </script>
+<script>
+    function secondFunction(){
+  document.getElementById("second").innerHTML = Date();
+  }
+  document.write(5 + 6)
+  console.log("My name is rashmi")
+  alert("Check your connection")
+</script>
+    <p id="addition"></p>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+<h1>The JavaScript <i>this</i> Keyword</h1>
+<p>In this example, <b>this</b> refers to the <b>person</b> object.</p>
+<p>Because <b>fullName</b> is a method of the person object.</p>
+
+    <script>
+    let a, b, c;
+    a = 5; b = 6; c = a + b;
+    document.getElementById("demo1").innerHTML = c;
+    </script>
+    <script>
+        var x = 5;
+        var y = 3;
+        var z = x + y;
+        document.getElementById("demo2").innerHTML = z;
+    </script>
+    <script>
+    // Create an object:
+    const car = {type:"Fiat", model:"500", color:"white"};
+
+    // Display some data from the object:
+    document.getElementById("demo3").innerHTML = "The car type is " + car.type;
+    </script>
+    <script>
+    // Create an object:
+    const person = {
+      firstName: "John",
+      lastName: "Doe",
+      id: 5566,
+      fullName : function() {
+        return this.firstName + " " + this.lastName;
+      }
+    };
+
+// Display data from the object:
+document.getElementById("demo").innerHTML = person.fullName();
+</script>
+</head>
+<body>
+<h2>Demo JavaScript in Head</h2>
+
+<p id="demo">A Paragraph</p>
+<button type="button" onclick="myFunction()">Try it</button>
+
+<p id="second">Display date</p>
+<button type="button" onclick="secondFunction()">Current Date</button>
+
+<button onclick="window.print()">Print page</button>
+
+
+
+</body>
+</html>
