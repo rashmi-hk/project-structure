@@ -1,0 +1,24 @@
+console.log("EVENT");
+ function get_checkbox(event){
+console.log("getCheckbox",event.target.checked)
+   if (event.target.checked) {
+console.log("call API");
+    } else {
+        console.log("checkbox is not checked");
+    }
+}
+
+function get_child_checkbox_details(event) {
+    console.log("childe log ====>",event);
+    strParams = "appId=" + "moron"
+    path  = "https://surfie-t.puresight.com/ParentAppSettings/IOsApplicationManagment/testAjax";
+    psAjaxRequest(path, strParams, 'testResponse', 'POST', "appTime.html");
+
+}
+
+function testResponse(response)
+{
+    alert(response);
+}
+
+

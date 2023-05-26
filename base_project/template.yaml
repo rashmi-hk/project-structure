@@ -1,0 +1,18 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  cf_deploy_python_libraries
+  
+  Sample SAM Template of cf_deploy_python_libraries
+
+Globals:
+  Function:
+    Timeout: 20
+
+Resources:
+  CreateDataframe:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: base_app/api/views/
+      Handler: first_lambda_python.lambda_handler
+      Runtime: python3.8

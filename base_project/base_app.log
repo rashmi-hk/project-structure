@@ -4,3 +4,9 @@
 2022-06-14 11:59:10.615 DEBUG    base_app.api.views.signup:71 Inside patch method
 2022-06-14 11:59:10.616 DEBUG    base_app.api.views.signup:72 Request {'email': 'sahana@gmail.com'}
 2022-06-14 11:59:10.618 DEBUG    base_app.api.views.signup:76 group_data exist False
+2022-07-13 11:14:17.404 DEBUG    base_app.api.views.signup:28 This is get
+2022-08-01 07:02:14.897 DEBUG    base_app.api.views.signup:28 This is get
+2022-08-01 07:02:45.417 DEBUG    base_app.api.views.signup:28 This is get
+2022-08-01 07:03:18.777 DEBUG    base_app.api.views.signup:32 Inside post
+2022-08-01 07:03:19.002 DEBUG    base_app.api.views.signup:67 myuser appu
+2022-08-01 07:03:19.007 DEBUG    base_app.api.views.signup:73 Data saved
