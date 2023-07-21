@@ -21,9 +21,10 @@ LOGGER = logging.getLogger(__name__)
 class HomeAPIList(APIView):
 
     def get(self,request):
-        print("Inside Home get")
+        print("Inside get homeapi")
+        # return render(request, 'index.html')
         # return render(request, 'login.html')
-        return render(request, 'login_custom.html')
+        return render(request, 'otp_verification.html')
 
     def post(self,request):
         print("Inside home post", request)
